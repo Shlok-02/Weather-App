@@ -37,27 +37,37 @@ const Main = () => {
   return (
       
     <>
-    {console.log(weather)}
+   
       <div className="weather">
          <div className="sub">
-         <h1>Weather app</h1>
-         <input type="text" onChange={handleChange} value={place}/>
-         <button onClick={handleClick}>Click</button>
-         <div className="desc">
-         {
-           weather.map((index)=>{
-             return(
-               <div key={index.id}>
-               <h1>{index.name}</h1>
-                  <h2>Temprature  {index.main.temp}</h2>
-                  {index.weather[0].main}
-                  <h3>Max Temp:- {index.main.temp_max}</h3>
-                  <h3>Min Temp:- {index.main.temp_min}</h3>
-               </div>
-             )
-           })
-         }
-         </div>
+            <h1 className='heading'>Weather app</h1>
+            <input type="text" onChange={handleChange} value={place}/>
+            <button onClick={handleClick}>Click</button>
+            <div className="desc">
+            {
+              weather.map((index)=>{
+                return(
+                  <div key={index.id} className="wrap">
+                    <div className="left">
+                      <img
+                          src={
+                            require(`../images/${index.weather[0].icon}.svg`)
+                          }
+                    />
+                    <h2>{index.weather[0].main}</h2>
+						        </div>
+                  <div className="right">
+                    <h1>{index.name}</h1>
+                    
+                    <h2>Temprature  {index.main.temp}</h2>
+                    <h3>Max Temp:- {index.main.temp_max}</h3>
+                    <h3>Min Temp:- {index.main.temp_min}</h3>
+                  </div>
+                  </div>
+                )
+              })
+            }
+            </div>
          </div>
       </div>
     </>

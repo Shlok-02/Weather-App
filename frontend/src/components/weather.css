@@ -1,11 +1,63 @@
+@import url('https://fonts.googleapis.com/css2?family=Gentium+Plus:wght@700&display=swap');
 *{
     padding: 0;
     margin: 0;
+    font-family: 'Gentium Plus', serif;
 }
 
 .weather{
-    background-image: url("../images/background.jpg");
+    background: url("../images/background.jpg") center no-repeat;
     width: 100%;
     height: 100vh;
 }
 
+.desc{
+    border: 1px solid white;
+    width: 50%;
+    margin: auto;
+    margin-top: 100px;
+}
+
+input{
+    padding: 10px 15px;
+    border: none;
+    width: 500px;
+    border-radius:0px;
+    font-size: 18px;
+    margin-top: 50px;
+}
+
+input:focus{
+    outline: none;
+}
+
+.heading{
+    padding-top: 20px;
+    font-size: 42px;
+}
+
+button{
+    padding: 10px 15px;
+    border: none; 
+    width: 120px;
+    font-size: 18px;
+    background-color: rgb(13, 190, 250);
+}
+
+button:hover{
+    cursor: pointer;
+    background-color: rgb(78, 201, 242);
+}
+
+.wrap{
+    display: flex;
+
+}
+
+.left{
+    width: 50%;
+}
+
+.left img{
+    height: 100px;
+}
